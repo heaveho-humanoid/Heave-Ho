@@ -48,4 +48,8 @@ At the high level, the leader's vision-language planner selects the next team sk
 
 ## Citation
 
-A BibTeX entry will be added here once the paper is on arXiv.
+If you find our work useful for your research, please consider cite us:
+
+```
+
+```
