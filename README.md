@@ -3,7 +3,7 @@
 <p align="center">
   <a href="https://koi953215.github.io/">Ting-Hsuan Chen</a><sup>1*</sup>&nbsp;&nbsp;
   <a href="https://sihengz02.github.io/">Siheng Zhao</a><sup>1*&Dagger;</sup>&nbsp;&nbsp;
-  <a href="https://hanjiang.site/">Han Jiang</a><sup>1</sup>&nbsp;&nbsp;
+  <a href="https://hanjiang.site/">Han Jiang</a><sup>1*</sup>&nbsp;&nbsp;
   <a href="https://www.linkedin.com/in/qi-pan-179050384/">Qi Pan</a><sup>1</sup>&nbsp;&nbsp;
   <a href="https://www.linkedin.com/in/louisonlu/">Louison Lu</a><sup>1</sup>
   <br>
