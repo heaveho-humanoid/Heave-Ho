@@ -22,7 +22,7 @@
 
 <p align="center">
   <a href="https://heaveho-humanoid.github.io/"><img src="https://img.shields.io/badge/Project-Page-2f6db5?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Project Page"></a>
-  <img src="https://img.shields.io/badge/arXiv-coming%20soon-b31b1b?style=for-the-badge&logo=arxiv&logoColor=white" alt="arXiv (coming soon)">
+  <a href="https://arxiv.org/abs/2611.22275"><img src="https://img.shields.io/badge/arXiv-2611.22275-b31b1b?style=for-the-badge&logo=arxiv&logoColor=white" alt="arXiv"></a>
   <img src="https://img.shields.io/badge/Code-coming%20Dec%202026-18202c?style=for-the-badge&logo=github&logoColor=white" alt="Code (coming by the end of December 2026)">
 </p>
 
@@ -50,6 +50,11 @@ At the high level, the leader's vision-language planner selects the next team sk
 
 If you find our work useful for your research, please consider cite us:
 
-```
-
+```bibtex
+@article{chen2026heaveho,
+  title   = {Heave-Ho: Decentralized Long-Horizon Multi-Humanoid Collaboration},
+  author  = {Chen, Ting-Hsuan and Zhao, Siheng and Jiang, Han and Pan, Qi and Lu, Louison and Luo, Jiaheng and Bao, Henghui and Chen, Yiyu and Nguyen, Quan and Wang, Yue},
+  journal = {arXiv preprint arXiv:2611.22275},
+  year    = {2026}
+}
 ```
