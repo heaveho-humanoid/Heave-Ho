@@ -48,7 +48,7 @@ At the high level, the leader's vision-language planner selects the next team sk
 
 ## Citation
 
-If you find our work useful for your research, please consider cite us:
+If you find our work useful for your research, please consider citing us:
 
 ```bibtex
 @article{chen2026heaveho,
