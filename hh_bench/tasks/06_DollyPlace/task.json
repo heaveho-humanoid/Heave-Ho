@@ -1,0 +1,57 @@
+{
+ "id": "06_DollyPlace",
+ "title": "DollyPlace (lift, carry, put down on the pallet)",
+ "robot_type": "g1_29dof_rubberhand-feet-complex",
+ "max_episode_length": 3340,
+ "num_agents": 2,
+ "fps": 50,
+ "joints": 29,
+ "bodies": 30,
+ "extra_body_names": [
+  "right_wrist_yaw_link",
+  "suitcase",
+  "platform"
+ ],
+ "frames": 3346,
+ "seconds": 66.92,
+ "object": {
+  "name": "suitcase",
+  "usd": "objects/suitcase/suitcase.usd",
+  "scale": [
+   3.5,
+   0.5166666666666667,
+   1.075
+  ],
+  "body_name_in_motion": "suitcase",
+  "mass_kg": null
+ },
+ "static_extras": [
+  {
+   "name": "platform",
+   "usd": "objects/platform/platform.usd",
+   "scale": [
+    0.5,
+    0.2727272727272727,
+    0.2105263157894737
+   ],
+   "pose": "body of the same name in motion.npz"
+  }
+ ],
+ "object_revolute_joint": null,
+ "terrain": "flat ground z=0 + static_extras",
+ "composed_from_units": {
+  "keys": "r w q q q q q q w w w a a f",
+  "legend": {
+   "r": "lift the box (raise)",
+   "f": "put the box down",
+   "w": "one step forward",
+   "s": "one step backward",
+   "a": "one step left",
+   "d": "one step right",
+   "q": "turn 15 deg left",
+   "e": "turn 15 deg right"
+  },
+  "frame": "keys are in the team frame (robot_0 side = forward)",
+  "note": "the final put-down (f) stops early, with the box bottom 1 cm above the pallet top, then the hands let go"
+ }
+}

@@ -1,0 +1,42 @@
+{
+ "id": "05_stair_carry",
+ "title": "Stair carry",
+ "robot_type": "g1_29dof_dex3_closed-feet-complex",
+ "max_episode_length": 1500,
+ "num_agents": 2,
+ "fps": 50,
+ "joints": 29,
+ "bodies": 30,
+ "extra_body_names": [
+  "right_wrist_yaw_link",
+  "suitcase",
+  "stair_carry"
+ ],
+ "frames": 2484,
+ "seconds": 49.68,
+ "object": {
+  "name": "suitcase",
+  "usd": "objects/suitcase/suitcase.usd",
+  "scale": [
+   3.5,
+   0.5166666666666667,
+   1.075
+  ],
+  "body_name_in_motion": "suitcase",
+  "mass_kg": null
+ },
+ "static_extras": [
+  {
+   "name": "stair_carry",
+   "usd": "objects/stair_carry/stair_carry.usd",
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "pose": "body of the same name in motion.npz"
+  }
+ ],
+ "object_revolute_joint": null,
+ "terrain": "flat ground z=0 + static_extras"
+}

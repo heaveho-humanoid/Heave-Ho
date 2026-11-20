@@ -1,0 +1,45 @@
+{
+ "id": "02_narrow_door",
+ "title": "Narrow door",
+ "robot_type": "g1_29dof_dex3_closed-feet-complex",
+ "max_episode_length": 1500,
+ "num_agents": 2,
+ "fps": 50,
+ "joints": 29,
+ "bodies": 29,
+ "extra_body_names": [
+  "right_wrist_pitch_link",
+  "right_wrist_yaw_link",
+  "suitcase"
+ ],
+ "frames": 4471,
+ "seconds": 89.42,
+ "object": {
+  "name": "suitcase",
+  "usd": "objects/suitcase/suitcase.usd",
+  "scale": [
+   3.5,
+   0.5166666666666667,
+   1.075
+  ],
+  "body_name_in_motion": "suitcase",
+  "mass_kg": null
+ },
+ "static_extras": [],
+ "object_revolute_joint": null,
+ "terrain": "flat ground z=0 + terrain.usd walls",
+ "composed_from_units": {
+  "keys": "r w w w q q q q q q w w w w w w w w w f",
+  "legend": {
+   "r": "lift the box (raise)",
+   "f": "put the box down",
+   "w": "one step forward",
+   "s": "one step backward",
+   "a": "one step left",
+   "d": "one step right",
+   "q": "turn 15 deg left",
+   "e": "turn 15 deg right"
+  },
+  "frame": "keys are in the team frame (robot_0 side = forward)"
+ }
+}

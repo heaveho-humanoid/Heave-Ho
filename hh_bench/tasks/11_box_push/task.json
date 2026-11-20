@@ -1,0 +1,32 @@
+{
+ "id": "11_box_push",
+ "title": "Box push",
+ "robot_type": "g1_29dof_rubberhand-feet-complex",
+ "max_episode_length": 1000,
+ "num_agents": 2,
+ "fps": 50.0,
+ "joints": 25,
+ "bodies": 29,
+ "extra_body_names": [
+  "right_wrist_pitch_link",
+  "right_wrist_yaw_link",
+  "box"
+ ],
+ "frames": 792,
+ "seconds": 15.84,
+ "object": {
+  "name": "box",
+  "usd": "objects/box/box.usd",
+  "scale": [
+   1.0,
+   2.0,
+   1.0
+  ],
+  "body_name_in_motion": "box",
+  "mass_kg": null
+ },
+ "static_extras": [],
+ "object_revolute_joint": null,
+ "terrain": "flat ground z=0",
+ "note": "motion has 25 joints (no wrist pitch/yaw); hold left/right_wrist_pitch/yaw at 0"
+}

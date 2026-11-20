@@ -1,0 +1,31 @@
+{
+ "id": "03c_table_10robots",
+ "title": "Table carry, 10 robots",
+ "robot_type": "g1_29dof_rubberhand-feet-complex",
+ "max_episode_length": 3200,
+ "num_agents": 10,
+ "fps": 50,
+ "joints": 29,
+ "bodies": 29,
+ "extra_body_names": [
+  "right_wrist_pitch_link",
+  "right_wrist_yaw_link",
+  "longtable10"
+ ],
+ "frames": 1840,
+ "seconds": 36.8,
+ "object": {
+  "name": "longtable10",
+  "usd": "objects/longtable10/longtable10.usd",
+  "scale": [
+   1,
+   1,
+   1
+  ],
+  "mass_kg": null,
+  "body_name_in_motion": "longtable10"
+ },
+ "static_extras": [],
+ "object_revolute_joint": null,
+ "terrain": "flat ground z=0"
+}

@@ -32,6 +32,7 @@
 
 > [!NOTE]
 > **Code release:** we plan to release the code by the end of December 2026. Watch or star this repository to get notified.
+> A preliminary version of HH-Bench is already available in [`hh_bench/`](hh_bench/).
 > In the meantime, videos of all real-world and simulated experiments are on the [project page](https://heaveho-humanoid.github.io/).
 
 ## Abstract
@@ -45,6 +46,22 @@ Collaboration promises to extend humanoid capabilities beyond what individual ro
 </p>
 
 At the high level, the leader's vision-language planner selects the next team skill from its camera and speaks it; every follower recognizes the command on board, and all robots start it on a shared skill schedule. At the low level, each robot maps the team skill to its own role, generates a reference conditioned on the object specification, and tracks it with a frozen foundation tracking model plus a residual policy shared by all robots. No network message is exchanged between robots.
+
+## HH-Bench
+
+[`hh_bench/`](hh_bench/) contains a preliminary release of HH-Bench: reference motions, scene and object assets, robot
+models and task metadata for 12 tasks (18 variants with 2 to 10 robots), plus tools to load and replay them.
+The exact specifications we used in the paper (object masses, success criteria, evaluation protocol) will be released
+later; object masses are currently left unset, so set them according to your own requirements. See
+[`hh_bench/README.md`](hh_bench/README.md).
+
+## Release Plan
+
+- [x] HH-Bench (preliminary)
+- [ ] HH-Bench official specifications (object masses, success criteria, evaluation scripts)
+- [ ] Training code
+- [ ] Pretrained weights
+- [ ] Sim2sim deployment code
 
 ## Citation
 

@@ -1,0 +1,60 @@
+{
+ "fps": 50,
+ "boxes": [
+  {
+   "name": "box1_70x15.5x43_1kg",
+   "size": [
+    0.7,
+    0.155,
+    0.43
+   ],
+   "mass": 1.0,
+   "scale": [
+    3.4999999999999996,
+    0.5166666666666667,
+    1.075
+   ],
+   "spacing": 1.161,
+   "window": [
+    0,
+    4470
+   ],
+   "frames": 4471,
+   "contact_targets": [
+    [
+     [
+      -0.105,
+      -0.0775,
+      0.215
+     ],
+     [
+      -0.105,
+      0.0775,
+      0.215
+     ]
+    ],
+    [
+     [
+      -0.595,
+      0.0775,
+      0.215
+     ],
+     [
+      -0.595,
+      -0.0775,
+      0.215
+     ]
+    ]
+   ],
+   "max_joint_step": 0.141
+  }
+ ],
+ "contact_eef_pos_offset": [
+  0.05,
+  0.0,
+  0.0
+ ],
+ "raise_dz": 0.035,
+ "raise_ramp": 0.1,
+ "source": "skill_library_box1_155 chained like sim2real skill_sequencer (demo plan), z35 applied"
+}

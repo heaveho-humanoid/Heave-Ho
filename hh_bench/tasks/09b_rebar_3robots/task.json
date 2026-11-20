@@ -1,0 +1,43 @@
+{
+ "id": "09b_rebar_3robots",
+ "title": "Rebar / beam shoulder carry, 3 robots",
+ "robot_type": "g1_29dof_rubberhand-feet-complex",
+ "max_episode_length": 1000,
+ "num_agents": 3,
+ "fps": 50,
+ "joints": 29,
+ "bodies": 30,
+ "extra_body_names": [
+  "right_wrist_pitch_link",
+  "right_wrist_yaw_link",
+  "suitcase",
+  "log_sawhorses_n3"
+ ],
+ "frames": 1189,
+ "seconds": 23.78,
+ "object": {
+  "name": "suitcase",
+  "usd": "objects/suitcase/suitcase.usd",
+  "scale": [
+   20.5,
+   0.4667,
+   0.35
+  ],
+  "mass_kg": null,
+  "body_name_in_motion": "suitcase"
+ },
+ "static_extras": [
+  {
+   "name": "log_sawhorses_n3",
+   "usd": "objects/log_sawhorses/log_sawhorses_n3.usd",
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "pose": "body of the same name in motion.npz"
+  }
+ ],
+ "object_revolute_joint": null,
+ "terrain": "flat ground z=0 + static_extras"
+}

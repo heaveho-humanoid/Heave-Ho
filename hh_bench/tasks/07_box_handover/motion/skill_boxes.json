@@ -1,0 +1,146 @@
+{
+  "fps": 50,
+  "boxes": [
+    {
+      "name": "box2_37x26.5x45.5_0.5kg_upright",
+      "size": [
+        0.37,
+        0.265,
+        0.455
+      ],
+      "mass": 0.5,
+      "scale": [
+        1.8499999999999999,
+        0.8833333333333334,
+        1.1375
+      ],
+      "window": [
+        0,
+        1675
+      ],
+      "frames": 1676,
+      "contact_targets": [
+        [
+          [
+            -0.2763,
+            0.1325,
+            0.3525
+          ],
+          [
+            -0.2763,
+            -0.1325,
+            0.3525
+          ]
+        ],
+        [
+          [
+            -0.0937,
+            -0.1325,
+            0.1025
+          ],
+          [
+            -0.0937,
+            0.1325,
+            0.1025
+          ]
+        ]
+      ],
+      "max_joint_step": 0.112
+    }
+  ],
+  "desk": {
+    "body": "handover_truck_975",
+    "size": [
+      1.93,
+      3.02,
+      0.975
+    ],
+    "top": 0.975
+  },
+  "agents": {
+    "agent_0": "A (on the truck)",
+    "agent_1": "B (floor)"
+  },
+  "a_steps": 6,
+  "turn": "smooth",
+  "raise_dz": 0.035,
+  "wrists_locked": true,
+  "segments": [
+    [
+      "hold",
+      0.0
+    ],
+    [
+      "A_reach",
+      1.0
+    ],
+    [
+      "A_grip",
+      2.5
+    ],
+    [
+      "A_lift",
+      2.9
+    ],
+    [
+      "A_walk",
+      4.4
+    ],
+    [
+      "A_lower_B_step_in",
+      14.54
+    ],
+    [
+      "B_reach",
+      16.48
+    ],
+    [
+      "B_grip",
+      17.68
+    ],
+    [
+      "both_hold",
+      18.08
+    ],
+    [
+      "A_release",
+      19.08
+    ],
+    [
+      "A_stand",
+      19.48
+    ],
+    [
+      "B_lower_step_back",
+      20.98
+    ],
+    [
+      "B_turn_ccw_smooth",
+      23.32
+    ],
+    [
+      "B_walk_5",
+      26.6
+    ],
+    [
+      "B_stand",
+      31.52
+    ]
+  ],
+  "check": {
+    "A": {
+      "pos_mm": 0.2,
+      "palm_deg_max": 13.2,
+      "palm_deg_mean": 11.1,
+      "finger_turn_deg_max": 2.3,
+      "max_joint_speed": 4.22
+    },
+    "B": {
+      "pos_mm": 0.11,
+      "palm_deg_max": 16.5,
+      "palm_deg_mean": 8.4,
+      "finger_turn_deg_max": 1.9,
+      "max_joint_speed": 5.6
+    }
+  }
+}

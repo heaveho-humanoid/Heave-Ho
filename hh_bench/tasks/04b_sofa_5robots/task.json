@@ -1,0 +1,32 @@
+{
+ "id": "04b_sofa_5robots",
+ "title": "L-shaped sofa, 5 robots",
+ "robot_type": "g1_29dof_rubberhand-feet-complex",
+ "max_episode_length": 3000,
+ "num_agents": 5,
+ "fps": 50,
+ "joints": 29,
+ "bodies": 29,
+ "extra_body_names": [
+  "right_wrist_pitch_link",
+  "right_wrist_yaw_link",
+  "l_sofa_v3_n5"
+ ],
+ "frames": 2557,
+ "seconds": 51.14,
+ "object": {
+  "name": "l_sofa_v3_n5",
+  "usd": "objects/l_sofa/l_sofa_v3_n5.usd",
+  "scale": [
+   1,
+   1,
+   1
+  ],
+  "mass_kg": null,
+  "body_name_in_motion": "l_sofa_v3_n5"
+ },
+ "static_extras": [],
+ "object_revolute_joint": null,
+ "terrain": "flat ground z=0",
+ "note": "larger L sofa (2.25 x 1.44 m) at the v3 heights (frame bottom 0.37 m); 3 robots behind the long backrest, one in front, one at the short-arm end"
+}

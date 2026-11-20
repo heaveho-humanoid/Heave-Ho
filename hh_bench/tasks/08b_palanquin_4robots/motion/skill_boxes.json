@@ -1,0 +1,342 @@
+{
+  "fps": 50,
+  "boxes": [
+    {
+      "name": "sedan_chair_n4",
+      "size": [
+        2.05,
+        1.9,
+        1.706
+      ],
+      "mass": 12.0,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "window": [
+        0,
+        1090
+      ],
+      "frames": 1091,
+      "contact_targets": [
+        [
+          [
+            1.0,
+            -0.2923,
+            0.0
+          ],
+          [
+            1.0,
+            -0.6077,
+            0.0
+          ]
+        ],
+        [
+          [
+            1.0,
+            0.6077,
+            0.0
+          ],
+          [
+            1.0,
+            0.2923,
+            0.0
+          ]
+        ],
+        [
+          [
+            -1.0,
+            -0.2923,
+            0.0
+          ],
+          [
+            -1.0,
+            -0.6077,
+            0.0
+          ]
+        ],
+        [
+          [
+            -1.0,
+            0.6077,
+            0.0
+          ],
+          [
+            -1.0,
+            0.2923,
+            0.0
+          ]
+        ]
+      ],
+      "max_joint_step": 0.063
+    }
+  ],
+  "sedan_chair": {
+    "origin": "midway between the crossbar axes, y = 0, crossbar-axis height; identity orientation; stands on its 4 legs (ground at z = -h0)",
+    "per_end": 2,
+    "slot_width": 0.9,
+    "mass": 12.0,
+    "h0": 0.801,
+    "parts": {
+      "crossbars": [
+        {
+          "type": "cylinder",
+          "axis": "y",
+          "radius": 0.025,
+          "length": 1.9000000000000001,
+          "center": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "cylinder",
+          "axis": "y",
+          "radius": 0.025,
+          "length": 1.9000000000000001,
+          "center": [
+            -1.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "poles": [
+        {
+          "type": "cylinder",
+          "axis": "x",
+          "radius": 0.025,
+          "length": 2.0,
+          "center": [
+            0.0,
+            -0.9,
+            0.0
+          ]
+        },
+        {
+          "type": "cylinder",
+          "axis": "x",
+          "radius": 0.025,
+          "length": 2.0,
+          "center": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "cylinder",
+          "axis": "x",
+          "radius": 0.025,
+          "length": 2.0,
+          "center": [
+            0.0,
+            0.9,
+            0.0
+          ]
+        }
+      ],
+      "cabin": {
+        "type": "box",
+        "size": [
+          0.8,
+          1.7,
+          0.8
+        ],
+        "center": [
+          0.0,
+          0.0,
+          0.42500000000000004
+        ]
+      },
+      "roof": {
+        "type": "box",
+        "size": [
+          0.92,
+          1.8,
+          0.08
+        ],
+        "center": [
+          0.0,
+          0.0,
+          0.8650000000000001
+        ]
+      },
+      "legs": [
+        {
+          "type": "box",
+          "size": [
+            0.05,
+            0.05,
+            0.8259702254680443
+          ],
+          "center": [
+            0.375,
+            0.825,
+            -0.38798511273402214
+          ]
+        },
+        {
+          "type": "box",
+          "size": [
+            0.05,
+            0.05,
+            0.8259702254680443
+          ],
+          "center": [
+            0.375,
+            -0.825,
+            -0.38798511273402214
+          ]
+        },
+        {
+          "type": "box",
+          "size": [
+            0.05,
+            0.05,
+            0.8259702254680443
+          ],
+          "center": [
+            -0.375,
+            0.825,
+            -0.38798511273402214
+          ]
+        },
+        {
+          "type": "box",
+          "size": [
+            0.05,
+            0.05,
+            0.8259702254680443
+          ],
+          "center": [
+            -0.375,
+            -0.825,
+            -0.38798511273402214
+          ]
+        }
+      ]
+    }
+  },
+  "carry": "crossbar hooked in the elbow crooks (Zercher hold), contact on the elbow links; wrists 0",
+  "contact_eef": [
+    "left_elbow_link",
+    "right_elbow_link"
+  ],
+  "raise_dz": 0.035,
+  "agents": {
+    "agent_0": "front bearer, y -0.45",
+    "agent_1": "front bearer, y +0.45",
+    "agent_2": "rear bearer, y -0.45",
+    "agent_3": "rear bearer, y +0.45"
+  },
+  "segments": [
+    [
+      "stand",
+      0.0
+    ],
+    [
+      "squat",
+      1.0
+    ],
+    [
+      "arms_in",
+      2.6
+    ],
+    [
+      "hook",
+      3.5
+    ],
+    [
+      "lift",
+      4.3
+    ],
+    [
+      "walk_10",
+      5.9
+    ],
+    [
+      "stop",
+      14.92
+    ],
+    [
+      "put_down",
+      15.92
+    ],
+    [
+      "unhook",
+      17.82
+    ],
+    [
+      "arms_out",
+      18.32
+    ],
+    [
+      "stand_up",
+      19.22
+    ]
+  ],
+  "check": {
+    "bearers": 4,
+    "hook": {
+      "q_left": [
+        -0.8,
+        0.15,
+        0.2,
+        -0.32
+      ],
+      "trap_depth_cm": 26.0,
+      "bar_in_torso": [
+        0.136,
+        0.0,
+        0.205
+      ]
+    },
+    "crook_bar_gap_mm": [
+      -0.0,
+      0.0
+    ],
+    "torso_rotation_deg_max": 0.0,
+    "waist_pitch_range": [
+      -0.375,
+      0.075
+    ],
+    "chair_feet_z_mm": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "lift_m": 0.148,
+    "leg_ik_residual_max": 9.936886429947058e-06,
+    "max_joint_speed": 3.16,
+    "clearance_mm": {
+      "cabin-arm": 291.8,
+      "cabin-body": 394.5,
+      "cabin-crook": 420.0,
+      "cabin-head": 417.9,
+      "cabin-leg": 419.7,
+      "crossbars-arm": 8.1,
+      "crossbars-body": 24.1,
+      "crossbars-crook": -0.0,
+      "crossbars-head": 55.4,
+      "crossbars-leg": 123.9,
+      "legs-arm": 340.6,
+      "legs-body": 442.0,
+      "legs-crook": 446.5,
+      "legs-head": 515.2,
+      "legs-leg": 363.3,
+      "poles-arm": 207.3,
+      "poles-body": 245.5,
+      "poles-crook": 206.0,
+      "poles-head": 349.2,
+      "poles-leg": 304.5,
+      "roof-arm": 684.6,
+      "roof-body": 664.9,
+      "roof-crook": 761.9,
+      "roof-head": 545.2,
+      "roof-leg": 1012.0
+    }
+  }
+}

@@ -1,0 +1,444 @@
+{
+  "fps": 50,
+  "num_agents": 2,
+  "boxes": [
+    {
+      "name": "millstone",
+      "size": [
+        2.7591,
+        1.1314,
+        0.6913
+      ],
+      "mass": 30.0,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "window": [
+        0,
+        1853
+      ],
+      "frames": 1854,
+      "contact_targets": [
+        [
+          [
+            0.97,
+            0.36,
+            1.0
+          ],
+          [
+            1.33,
+            0.36,
+            1.0
+          ]
+        ],
+        [
+          [
+            -0.97,
+            -0.36,
+            1.0
+          ],
+          [
+            -1.33,
+            -0.36,
+            1.0
+          ]
+        ]
+      ]
+    }
+  ],
+  "object": {
+    "name": "millstone",
+    "mass": 30.0,
+    "origin": "on the rotation axis, at the ground (planning frame) + Z_RAISE",
+    "joint": "revolute about world z through the origin (NOT a free body)",
+    "parts": [
+      {
+        "name": "top_stone",
+        "type": "cylinder",
+        "radius": 0.4,
+        "height": 0.25,
+        "pos": [
+          0.0,
+          0.0,
+          0.525
+        ],
+        "yaw": 0.0
+      },
+      {
+        "name": "post",
+        "type": "cylinder",
+        "radius": 0.06,
+        "height": 0.2806,
+        "pos": [
+          0.0,
+          0.0,
+          0.7903
+        ],
+        "yaw": 0.0
+      },
+      {
+        "name": "lever_0",
+        "type": "box",
+        "size": [
+          1.2679,
+          0.07,
+          0.07
+        ],
+        "pos": [
+          0.575,
+          0.267,
+          0.8356
+        ],
+        "yaw": 0.4347
+      },
+      {
+        "name": "riser_0",
+        "type": "box",
+        "size": [
+          0.05,
+          0.07,
+          0.2
+        ],
+        "pos": [
+          1.15,
+          0.534,
+          0.9006
+        ],
+        "yaw": 1.5708
+      },
+      {
+        "name": "handle_0",
+        "type": "convex",
+        "vertices": [
+          [
+            0.9754,
+            0.441,
+            1.0006
+          ],
+          [
+            0.9754,
+            0.441,
+            1.0913
+          ],
+          [
+            1.3246,
+            0.441,
+            1.0006
+          ],
+          [
+            1.3246,
+            0.441,
+            1.0913
+          ],
+          [
+            0.9204,
+            0.559,
+            1.0006
+          ],
+          [
+            0.9204,
+            0.559,
+            1.0913
+          ],
+          [
+            1.3796,
+            0.559,
+            1.0006
+          ],
+          [
+            1.3796,
+            0.559,
+            1.0913
+          ]
+        ]
+      },
+      {
+        "name": "lever_1",
+        "type": "box",
+        "size": [
+          1.2679,
+          0.07,
+          0.07
+        ],
+        "pos": [
+          -0.575,
+          -0.267,
+          0.8356
+        ],
+        "yaw": 3.5763
+      },
+      {
+        "name": "riser_1",
+        "type": "box",
+        "size": [
+          0.05,
+          0.07,
+          0.2
+        ],
+        "pos": [
+          -1.15,
+          -0.534,
+          0.9006
+        ],
+        "yaw": 4.7124
+      },
+      {
+        "name": "handle_1",
+        "type": "convex",
+        "vertices": [
+          [
+            -0.9754,
+            -0.441,
+            1.0006
+          ],
+          [
+            -0.9754,
+            -0.441,
+            1.0913
+          ],
+          [
+            -1.3246,
+            -0.441,
+            1.0006
+          ],
+          [
+            -1.3246,
+            -0.441,
+            1.0913
+          ],
+          [
+            -0.9204,
+            -0.559,
+            1.0006
+          ],
+          [
+            -0.9204,
+            -0.559,
+            1.0913
+          ],
+          [
+            -1.3796,
+            -0.559,
+            1.0006
+          ],
+          [
+            -1.3796,
+            -0.559,
+            1.0913
+          ]
+        ]
+      }
+    ],
+    "contact_targets": [
+      [
+        [
+          0.97,
+          0.36,
+          1.0
+        ],
+        [
+          1.33,
+          0.36,
+          1.0
+        ]
+      ],
+      [
+        [
+          -0.97,
+          -0.36,
+          1.0
+        ],
+        [
+          -1.33,
+          -0.36,
+          1.0
+        ]
+      ]
+    ],
+    "palm_normals_robot_frame": {
+      "left": [
+        0.4226,
+        -0.9063,
+        0.0
+      ],
+      "right": [
+        0.4226,
+        0.9063,
+        0.0
+      ]
+    },
+    "window": [
+      0,
+      1853
+    ]
+  },
+  "static_extras": [
+    {
+      "name": "millstone_base",
+      "type": "cylinder",
+      "radius": 0.4,
+      "height": 0.43500000000000005,
+      "pos": [
+        0.0,
+        0.0,
+        0.21750000000000003
+      ]
+    }
+  ],
+  "robots": {
+    "circle_radius": 1.15,
+    "direction": "counter-clockwise",
+    "agent_k": "agent_0 rotated by 360*k/2 deg about the axis"
+  },
+  "raise_dz": 0.035,
+  "wrists_locked": true,
+  "segments": [
+    [
+      "stand",
+      0.0
+    ],
+    [
+      "reach",
+      1.0
+    ],
+    [
+      "descend",
+      2.7
+    ],
+    [
+      "close",
+      3.3
+    ],
+    [
+      "lean_in",
+      3.8
+    ],
+    [
+      "walk_240deg",
+      4.4
+    ],
+    [
+      "stop",
+      32.28
+    ],
+    [
+      "release",
+      33.28
+    ],
+    [
+      "ascend",
+      33.78
+    ],
+    [
+      "arms_down",
+      34.38
+    ],
+    [
+      "end",
+      36.08
+    ]
+  ],
+  "check": {
+    "approach_frames_0_200": {
+      "waist_yaw_deg": [
+        -0.0,
+        0.0
+      ],
+      "waist_roll_deg": [
+        0.0,
+        0.0
+      ],
+      "waist_pitch_deg": [
+        -10.7,
+        4.3
+      ],
+      "torso_pitch_deg": [
+        -4.8,
+        5.9
+      ],
+      "torso_roll_deg": [
+        -0.0,
+        0.0
+      ],
+      "l_shoulder_pitch_deg": [
+        -61.2,
+        -7.3
+      ],
+      "r_shoulder_pitch_deg": [
+        -61.2,
+        -7.3
+      ],
+      "max_joint_speed": 3.2
+    },
+    "release_window": {
+      "waist_pitch_deg": [
+        -9.3,
+        4.3
+      ],
+      "torso_pitch_deg": [
+        -4.2,
+        5.9
+      ],
+      "l_shoulder_pitch_deg": [
+        -60.9,
+        -7.3
+      ],
+      "r_shoulder_pitch_deg": [
+        -60.9,
+        -7.3
+      ]
+    },
+    "frames": 1854,
+    "seconds": 37.08,
+    "walked_deg": 240.0,
+    "steps": 34,
+    "wedge_deg": 25.0,
+    "handle_box_robot_frame": {
+      "x": [
+        0.441,
+        0.559
+      ],
+      "z": [
+        1.001,
+        1.091
+      ]
+    },
+    "nominal_palm_err_deg": {
+      "left": 5.7,
+      "right": 5.7
+    },
+    "nominal_hand_penetration_mm": 0,
+    "grip_wrist_err_mm": 0.16,
+    "grip_palm_err_deg_max": 6.6,
+    "contact_start_frame": 183,
+    "pre_contact_frames": [
+      50,
+      182
+    ],
+    "pre_contact_min_clearance_mm": {
+      "wrist_yaw_link / handle_0": 6.1,
+      "wrist_yaw_link / lever_0": 12.9,
+      "wrist_pitch_link / handle_0": 85.4
+    },
+    "grip_palm_handle_gap_mm": [
+      0.34,
+      4.35
+    ],
+    "grip_other_min_clearance_mm": {
+      "wrist_pitch_link / handle_0": 82.5,
+      "wrist_yaw_link / lever_0": 106.9,
+      "wrist_pitch_link / lever_0": 107.1
+    },
+    "contact_end_frame": 1667,
+    "post_release_min_clearance_mm": {
+      "wrist_yaw_link / handle_0": 5.0,
+      "wrist_yaw_link / lever_0": 12.9,
+      "wrist_pitch_link / handle_0": 84.3
+    },
+    "max_joint_speed": 3.2,
+    "lever_len": 1.268,
+    "lever_yaw_deg": 24.9
+  }
+}

@@ -1,0 +1,31 @@
+{
+ "id": "08b_palanquin_4robots",
+ "title": "Palanquin, 4 robots",
+ "robot_type": "g1_29dof_rubberhand-feet-complex",
+ "max_episode_length": 1000,
+ "num_agents": 4,
+ "fps": 50,
+ "joints": 29,
+ "bodies": 29,
+ "extra_body_names": [
+  "right_wrist_pitch_link",
+  "right_wrist_yaw_link",
+  "sedan_chair_n4"
+ ],
+ "frames": 1091,
+ "seconds": 21.82,
+ "object": {
+  "name": "sedan_chair_n4",
+  "usd": "objects/sedan_chair/sedan_chair_n4.usd",
+  "scale": [
+   1,
+   1,
+   1
+  ],
+  "mass_kg": null,
+  "body_name_in_motion": "sedan_chair_n4"
+ },
+ "static_extras": [],
+ "object_revolute_joint": null,
+ "terrain": "flat ground z=0"
+}

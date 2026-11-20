@@ -1,0 +1,665 @@
+[
+ {
+  "id": "01_L_corridor",
+  "title": "L-shaped corridor",
+  "robot_type": "g1_29dof_dex3_closed-feet-complex",
+  "max_episode_length": 1500,
+  "num_agents": 2,
+  "fps": 50,
+  "joints": 29,
+  "bodies": 29,
+  "extra_body_names": [
+   "right_wrist_pitch_link",
+   "right_wrist_yaw_link",
+   "suitcase"
+  ],
+  "frames": 5047,
+  "seconds": 100.94,
+  "object": {
+   "name": "suitcase",
+   "usd": "objects/suitcase/suitcase.usd",
+   "scale": [
+    3.5,
+    0.5166666666666667,
+    1.075
+   ],
+   "body_name_in_motion": "suitcase",
+   "mass_kg": null
+  },
+  "static_extras": [],
+  "object_revolute_joint": null,
+  "terrain": "flat ground z=0 + terrain.usd walls",
+  "composed_from_units": {
+   "keys": "r w w w w w w w w d d d d d d d d d d d d f",
+   "legend": {
+    "r": "lift the box (raise)",
+    "f": "put the box down",
+    "w": "one step forward",
+    "s": "one step backward",
+    "a": "one step left",
+    "d": "one step right",
+    "q": "turn 15 deg left",
+    "e": "turn 15 deg right"
+   },
+   "frame": "keys are in the team frame (robot_0 side = forward)"
+  }
+ },
+ {
+  "id": "02_narrow_door",
+  "title": "Narrow door",
+  "robot_type": "g1_29dof_dex3_closed-feet-complex",
+  "max_episode_length": 1500,
+  "num_agents": 2,
+  "fps": 50,
+  "joints": 29,
+  "bodies": 29,
+  "extra_body_names": [
+   "right_wrist_pitch_link",
+   "right_wrist_yaw_link",
+   "suitcase"
+  ],
+  "frames": 4471,
+  "seconds": 89.42,
+  "object": {
+   "name": "suitcase",
+   "usd": "objects/suitcase/suitcase.usd",
+   "scale": [
+    3.5,
+    0.5166666666666667,
+    1.075
+   ],
+   "body_name_in_motion": "suitcase",
+   "mass_kg": null
+  },
+  "static_extras": [],
+  "object_revolute_joint": null,
+  "terrain": "flat ground z=0 + terrain.usd walls",
+  "composed_from_units": {
+   "keys": "r w w w q q q q q q w w w w w w w w w f",
+   "legend": {
+    "r": "lift the box (raise)",
+    "f": "put the box down",
+    "w": "one step forward",
+    "s": "one step backward",
+    "a": "one step left",
+    "d": "one step right",
+    "q": "turn 15 deg left",
+    "e": "turn 15 deg right"
+   },
+   "frame": "keys are in the team frame (robot_0 side = forward)"
+  }
+ },
+ {
+  "id": "03a_table_2robots",
+  "title": "Table carry, 2 robots",
+  "robot_type": "g1_29dof_rubberhand-feet-complex",
+  "max_episode_length": 3200,
+  "num_agents": 2,
+  "fps": 50,
+  "joints": 29,
+  "bodies": 29,
+  "extra_body_names": [
+   "right_wrist_pitch_link",
+   "right_wrist_yaw_link",
+   "carrytable"
+  ],
+  "frames": 1840,
+  "seconds": 36.8,
+  "object": {
+   "name": "carrytable",
+   "usd": "objects/carrytable/carrytable.usd",
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "mass_kg": null,
+   "body_name_in_motion": "carrytable"
+  },
+  "static_extras": [],
+  "object_revolute_joint": null,
+  "terrain": "flat ground z=0"
+ },
+ {
+  "id": "03b_table_4robots",
+  "title": "Table carry, 4 robots",
+  "robot_type": "g1_29dof_rubberhand-feet-complex",
+  "max_episode_length": 3200,
+  "num_agents": 4,
+  "fps": 50,
+  "joints": 29,
+  "bodies": 29,
+  "extra_body_names": [
+   "right_wrist_pitch_link",
+   "right_wrist_yaw_link",
+   "coscotable"
+  ],
+  "frames": 1840,
+  "seconds": 36.8,
+  "object": {
+   "name": "coscotable",
+   "usd": "objects/coscotable/coscotable.usd",
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "mass_kg": null,
+   "body_name_in_motion": "coscotable"
+  },
+  "static_extras": [],
+  "object_revolute_joint": null,
+  "terrain": "flat ground z=0"
+ },
+ {
+  "id": "03c_table_10robots",
+  "title": "Table carry, 10 robots",
+  "robot_type": "g1_29dof_rubberhand-feet-complex",
+  "max_episode_length": 3200,
+  "num_agents": 10,
+  "fps": 50,
+  "joints": 29,
+  "bodies": 29,
+  "extra_body_names": [
+   "right_wrist_pitch_link",
+   "right_wrist_yaw_link",
+   "longtable10"
+  ],
+  "frames": 1840,
+  "seconds": 36.8,
+  "object": {
+   "name": "longtable10",
+   "usd": "objects/longtable10/longtable10.usd",
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "mass_kg": null,
+   "body_name_in_motion": "longtable10"
+  },
+  "static_extras": [],
+  "object_revolute_joint": null,
+  "terrain": "flat ground z=0"
+ },
+ {
+  "id": "04a_sofa_2robots",
+  "title": "L-shaped sofa, 2 robots",
+  "robot_type": "g1_29dof_rubberhand-feet-complex",
+  "max_episode_length": 1500,
+  "num_agents": 2,
+  "fps": 50,
+  "joints": 29,
+  "bodies": 29,
+  "extra_body_names": [
+   "right_wrist_pitch_link",
+   "right_wrist_yaw_link",
+   "l_sofa_v5"
+  ],
+  "frames": 3895,
+  "seconds": 77.9,
+  "object": {
+   "name": "l_sofa_v5",
+   "usd": "objects/l_sofa/l_sofa_v5.usd",
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "mass_kg": null,
+   "body_name_in_motion": "l_sofa_v5"
+  },
+  "static_extras": [],
+  "object_revolute_joint": null,
+  "terrain": "flat ground z=0"
+ },
+ {
+  "id": "04b_sofa_5robots",
+  "title": "L-shaped sofa, 5 robots",
+  "robot_type": "g1_29dof_rubberhand-feet-complex",
+  "max_episode_length": 3000,
+  "num_agents": 5,
+  "fps": 50,
+  "joints": 29,
+  "bodies": 29,
+  "extra_body_names": [
+   "right_wrist_pitch_link",
+   "right_wrist_yaw_link",
+   "l_sofa_v3_n5"
+  ],
+  "frames": 2557,
+  "seconds": 51.14,
+  "object": {
+   "name": "l_sofa_v3_n5",
+   "usd": "objects/l_sofa/l_sofa_v3_n5.usd",
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "mass_kg": null,
+   "body_name_in_motion": "l_sofa_v3_n5"
+  },
+  "static_extras": [],
+  "object_revolute_joint": null,
+  "terrain": "flat ground z=0",
+  "note": "larger L sofa (2.25 x 1.44 m) at the v3 heights (frame bottom 0.37 m); 3 robots behind the long backrest, one in front, one at the short-arm end"
+ },
+ {
+  "id": "05_stair_carry",
+  "title": "Stair carry",
+  "robot_type": "g1_29dof_dex3_closed-feet-complex",
+  "max_episode_length": 1500,
+  "num_agents": 2,
+  "fps": 50,
+  "joints": 29,
+  "bodies": 30,
+  "extra_body_names": [
+   "right_wrist_yaw_link",
+   "suitcase",
+   "stair_carry"
+  ],
+  "frames": 2484,
+  "seconds": 49.68,
+  "object": {
+   "name": "suitcase",
+   "usd": "objects/suitcase/suitcase.usd",
+   "scale": [
+    3.5,
+    0.5166666666666667,
+    1.075
+   ],
+   "body_name_in_motion": "suitcase",
+   "mass_kg": null
+  },
+  "static_extras": [
+   {
+    "name": "stair_carry",
+    "usd": "objects/stair_carry/stair_carry.usd",
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "pose": "body of the same name in motion.npz"
+   }
+  ],
+  "object_revolute_joint": null,
+  "terrain": "flat ground z=0 + static_extras"
+ },
+ {
+  "id": "06_DollyPlace",
+  "title": "DollyPlace (lift, carry, put down on the pallet)",
+  "robot_type": "g1_29dof_rubberhand-feet-complex",
+  "max_episode_length": 3340,
+  "num_agents": 2,
+  "fps": 50,
+  "joints": 29,
+  "bodies": 30,
+  "extra_body_names": [
+   "right_wrist_yaw_link",
+   "suitcase",
+   "platform"
+  ],
+  "frames": 3346,
+  "seconds": 66.92,
+  "object": {
+   "name": "suitcase",
+   "usd": "objects/suitcase/suitcase.usd",
+   "scale": [
+    3.5,
+    0.5166666666666667,
+    1.075
+   ],
+   "body_name_in_motion": "suitcase",
+   "mass_kg": null
+  },
+  "static_extras": [
+   {
+    "name": "platform",
+    "usd": "objects/platform/platform.usd",
+    "scale": [
+     0.5,
+     0.2727272727272727,
+     0.2105263157894737
+    ],
+    "pose": "body of the same name in motion.npz"
+   }
+  ],
+  "object_revolute_joint": null,
+  "terrain": "flat ground z=0 + static_extras",
+  "composed_from_units": {
+   "keys": "r w q q q q q q w w w a a f",
+   "legend": {
+    "r": "lift the box (raise)",
+    "f": "put the box down",
+    "w": "one step forward",
+    "s": "one step backward",
+    "a": "one step left",
+    "d": "one step right",
+    "q": "turn 15 deg left",
+    "e": "turn 15 deg right"
+   },
+   "frame": "keys are in the team frame (robot_0 side = forward)",
+   "note": "the final put-down (f) stops early, with the box bottom 1 cm above the pallet top, then the hands let go"
+  }
+ },
+ {
+  "id": "07_box_handover",
+  "title": "Box handover from a truck",
+  "robot_type": "g1_29dof_rubberhand-feet-complex",
+  "max_episode_length": 1000,
+  "num_agents": 2,
+  "fps": 50,
+  "joints": 29,
+  "bodies": 30,
+  "extra_body_names": [
+   "right_wrist_yaw_link",
+   "suitcase",
+   "handover_truck_975"
+  ],
+  "frames": 1676,
+  "seconds": 33.52,
+  "object": {
+   "name": "suitcase",
+   "usd": "objects/suitcase/suitcase.usd",
+   "scale": [
+    1.85,
+    0.8833333333333334,
+    1.1375
+   ],
+   "body_name_in_motion": "suitcase",
+   "mass_kg": null
+  },
+  "static_extras": [
+   {
+    "name": "handover_truck_975",
+    "usd": "objects/handover_truck_975/handover_truck_975.usd",
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "pose": "body of the same name in motion.npz"
+   }
+  ],
+  "object_revolute_joint": null,
+  "terrain": "flat ground z=0 + static_extras (truck-sized cargo floor 1.93 x 3.02 m, top 0.975 m; walls / roof not modelled)",
+  "description": "A (agent_0) picks the box up, walks 6 steps straight to the rear edge, squats and hands it to B (agent_1) on the ground; both hold 1 s, A lets go; B steps back, turns 90 deg and walks 5 steps holding the box."
+ },
+ {
+  "id": "08a_palanquin_2robots",
+  "title": "Palanquin, 2 robots",
+  "robot_type": "g1_29dof_rubberhand-feet-complex",
+  "max_episode_length": 1000,
+  "num_agents": 2,
+  "fps": 50,
+  "joints": 29,
+  "bodies": 29,
+  "extra_body_names": [
+   "right_wrist_pitch_link",
+   "right_wrist_yaw_link",
+   "sedan_chair"
+  ],
+  "frames": 1091,
+  "seconds": 21.82,
+  "object": {
+   "name": "sedan_chair",
+   "usd": "objects/sedan_chair/sedan_chair.usd",
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "mass_kg": null,
+   "body_name_in_motion": "sedan_chair"
+  },
+  "static_extras": [],
+  "object_revolute_joint": null,
+  "terrain": "flat ground z=0"
+ },
+ {
+  "id": "08b_palanquin_4robots",
+  "title": "Palanquin, 4 robots",
+  "robot_type": "g1_29dof_rubberhand-feet-complex",
+  "max_episode_length": 1000,
+  "num_agents": 4,
+  "fps": 50,
+  "joints": 29,
+  "bodies": 29,
+  "extra_body_names": [
+   "right_wrist_pitch_link",
+   "right_wrist_yaw_link",
+   "sedan_chair_n4"
+  ],
+  "frames": 1091,
+  "seconds": 21.82,
+  "object": {
+   "name": "sedan_chair_n4",
+   "usd": "objects/sedan_chair/sedan_chair_n4.usd",
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "mass_kg": null,
+   "body_name_in_motion": "sedan_chair_n4"
+  },
+  "static_extras": [],
+  "object_revolute_joint": null,
+  "terrain": "flat ground z=0"
+ },
+ {
+  "id": "09a_rebar_2robots",
+  "title": "Rebar / beam shoulder carry, 2 robots",
+  "robot_type": "g1_29dof_rubberhand-feet-complex",
+  "max_episode_length": 1000,
+  "num_agents": 2,
+  "fps": 50,
+  "joints": 29,
+  "bodies": 30,
+  "extra_body_names": [
+   "right_wrist_pitch_link",
+   "right_wrist_yaw_link",
+   "suitcase",
+   "log_sawhorses"
+  ],
+  "frames": 1189,
+  "seconds": 23.78,
+  "object": {
+   "name": "suitcase",
+   "usd": "objects/suitcase/suitcase.usd",
+   "scale": [
+    14,
+    0.4667,
+    0.35
+   ],
+   "mass_kg": null,
+   "body_name_in_motion": "suitcase"
+  },
+  "static_extras": [
+   {
+    "name": "log_sawhorses",
+    "usd": "objects/log_sawhorses/log_sawhorses.usd",
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "pose": "body of the same name in motion.npz"
+   }
+  ],
+  "object_revolute_joint": null,
+  "terrain": "flat ground z=0 + static_extras"
+ },
+ {
+  "id": "09b_rebar_3robots",
+  "title": "Rebar / beam shoulder carry, 3 robots",
+  "robot_type": "g1_29dof_rubberhand-feet-complex",
+  "max_episode_length": 1000,
+  "num_agents": 3,
+  "fps": 50,
+  "joints": 29,
+  "bodies": 30,
+  "extra_body_names": [
+   "right_wrist_pitch_link",
+   "right_wrist_yaw_link",
+   "suitcase",
+   "log_sawhorses_n3"
+  ],
+  "frames": 1189,
+  "seconds": 23.78,
+  "object": {
+   "name": "suitcase",
+   "usd": "objects/suitcase/suitcase.usd",
+   "scale": [
+    20.5,
+    0.4667,
+    0.35
+   ],
+   "mass_kg": null,
+   "body_name_in_motion": "suitcase"
+  },
+  "static_extras": [
+   {
+    "name": "log_sawhorses_n3",
+    "usd": "objects/log_sawhorses/log_sawhorses_n3.usd",
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "pose": "body of the same name in motion.npz"
+   }
+  ],
+  "object_revolute_joint": null,
+  "terrain": "flat ground z=0 + static_extras"
+ },
+ {
+  "id": "10_fire_hose",
+  "title": "Fire hose",
+  "robot_type": "g1_29dof_rubberhand-feet-complex",
+  "max_episode_length": 1000,
+  "num_agents": 2,
+  "fps": 50,
+  "joints": 29,
+  "bodies": 28,
+  "extra_body_names": [
+   "right_wrist_pitch_link",
+   "right_wrist_yaw_link"
+  ],
+  "frames": 1402,
+  "seconds": 28.04,
+  "object": null,
+  "static_extras": [],
+  "object_revolute_joint": null,
+  "terrain": "flat ground z=0 + fire_hose.usd (hose, hydrant, retracting stands)",
+  "physical_hose": {
+   "usd": "objects/fire_hose/fire_hose.usd",
+   "spec": "objects/fire_hose/hose.json",
+   "note": "9.4 m chain hose (47 capsule links; mass user-defined), tail fixed to the hydrant; starts in Y stands that sink into the floor from frame 420. PhysX starts all hose joints at 0 (straight): write hose.json init_joint_pos_rad after reset."
+  },
+  "variants": {
+   "rubber_hand": {
+    "motion": "motion",
+    "robot_type": "g1_29dof_rubberhand-feet-complex",
+    "joints": 29,
+    "grip": "left palm under / right palm over the hose (flat palms)"
+   },
+   "dex3": {
+    "motion": "motion_dex3",
+    "robot_type": "g1_29dof_dex3-feet-complex",
+    "joints": 43,
+    "grip": "power grasp, tug-of-war style: fingers wrap the hose; Dex3-1 finger torque 1.4 N*m (thumb_0 2.45)",
+    "bodies": 42
+   }
+  }
+ },
+ {
+  "id": "11_box_push",
+  "title": "Box push",
+  "robot_type": "g1_29dof_rubberhand-feet-complex",
+  "max_episode_length": 1000,
+  "num_agents": 2,
+  "fps": 50.0,
+  "joints": 25,
+  "bodies": 29,
+  "extra_body_names": [
+   "right_wrist_pitch_link",
+   "right_wrist_yaw_link",
+   "box"
+  ],
+  "frames": 792,
+  "seconds": 15.84,
+  "object": {
+   "name": "box",
+   "usd": "objects/box/box.usd",
+   "scale": [
+    1.0,
+    2.0,
+    1.0
+   ],
+   "body_name_in_motion": "box",
+   "mass_kg": null
+  },
+  "static_extras": [],
+  "object_revolute_joint": null,
+  "terrain": "flat ground z=0",
+  "note": "motion has 25 joints (no wrist pitch/yaw); hold left/right_wrist_pitch/yaw at 0"
+ },
+ {
+  "id": "12_millstone",
+  "title": "Millstone",
+  "robot_type": "g1_29dof_rubberhand-feet-complex",
+  "max_episode_length": 1000,
+  "num_agents": 2,
+  "fps": 50,
+  "joints": 29,
+  "bodies": 30,
+  "extra_body_names": [
+   "right_wrist_yaw_link",
+   "millstone",
+   "millstone_base"
+  ],
+  "frames": 1854,
+  "seconds": 37.08,
+  "object": {
+   "name": "millstone",
+   "usd": "objects/millstone/millstone.usd",
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "body_name_in_motion": "millstone",
+   "mass_kg": null
+  },
+  "static_extras": [
+   {
+    "name": "millstone_base",
+    "usd": "objects/millstone/millstone_base.usd",
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "pose": "body of the same name in motion.npz"
+   }
+  ],
+  "object_revolute_joint": {
+   "anchor_env": [
+    0.0,
+    0.0,
+    0.035
+   ],
+   "anchor_local": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "axis": "Z",
+   "damping": 60.0
+  },
+  "terrain": "flat ground z=0 + static_extras"
+ }
+]

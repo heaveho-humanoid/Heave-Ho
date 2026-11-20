@@ -1,0 +1,141 @@
+{
+ "table": "coscotable",
+ "chain": "straight",
+ "order": [
+  "lift",
+  "fwd",
+  "fwd",
+  "fwd",
+  "putdown"
+ ],
+ "unit_start_s": [
+  [
+   "lift",
+   1.5
+  ],
+  [
+   "fwd",
+   12.06
+  ],
+  [
+   "fwd",
+   16.62
+  ],
+  [
+   "fwd",
+   21.18
+  ],
+  [
+   "putdown",
+   25.74
+  ]
+ ],
+ "frames": 1840,
+ "contact_targets": {
+  "0": [
+   [
+    -0.45,
+    -0.154,
+    0.6864
+   ],
+   [
+    -0.15,
+    -0.154,
+    0.6864
+   ]
+  ],
+  "1": [
+   [
+    -0.15,
+    0.154,
+    0.6864
+   ],
+   [
+    -0.45,
+    0.154,
+    0.6864
+   ]
+  ],
+  "2": [
+   [
+    0.15,
+    -0.154,
+    0.6864
+   ],
+   [
+    0.45,
+    -0.154,
+    0.6864
+   ]
+  ],
+  "3": [
+   [
+    0.45,
+    0.154,
+    0.6864
+   ],
+   [
+    0.15,
+    0.154,
+    0.6864
+   ]
+  ]
+ },
+ "neighbour_min_cm": [
+  7.25,
+  7.25
+ ],
+ "robot_to_legs_min_cm": 5.7,
+ "pair_info": {
+  "seconds": 36.8,
+  "frames": 1840,
+  "table_clearance_min_cm": 9.09,
+  "fit": {
+   "palm_minus_table_cm": [
+    -1.83,
+    0.27
+   ],
+   "table_tilt_max_deg": 2.05,
+   "table_z_range_cm": [
+    9.9,
+    12.0
+   ]
+  },
+  "robot_leg_to_table_leg_min_cm": 9.09,
+  "max_joint_step": 0.1204,
+  "lift_info": {
+   "table": "carrytable",
+   "table_width": 0.508,
+   "z_under": 0.686,
+   "table_mass": 3.0,
+   "gap": 0.2,
+   "inside": 0.1,
+   "spread": 0.15,
+   "squat_contact": 0.12,
+   "table_lift_hub": 0.12,
+   "squat_low": 0.18,
+   "reach_drop": 0.2,
+   "reach_in": 0.0,
+   "hand_support_tilt_deg": 14.0,
+   "wrist_lock": {
+    "left_wrist_roll_joint": -1.5247013431341825,
+    "left_wrist_pitch_joint": -0.08919655504106012,
+    "left_wrist_yaw_joint": 0.02713100411314688,
+    "right_wrist_roll_joint": 1.524861795124574,
+    "right_wrist_pitch_joint": -0.088921441334172,
+    "right_wrist_yaw_joint": -0.02712671803964667
+   },
+   "frames": 1006,
+   "stand_shoulder_roll": 0.15,
+   "arm_to_own_leg_min_cm": 1.21,
+   "contact_frames": [
+    324,
+    681
+   ],
+   "hand_top_margin_before_contact_cm": 0.001,
+   "edge_margin_cm": 7.48,
+   "lift_ik_err_cm": 0.043,
+   "max_joint_step": 0.0177
+  }
+ }
+}

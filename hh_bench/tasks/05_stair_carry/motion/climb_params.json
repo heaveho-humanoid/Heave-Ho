@@ -1,0 +1,18 @@
+{
+  "bwd": {
+    "beta": 0.3,
+    "dz_land": 0.08,
+    "alpha": 0.4,
+    "dz_off": 0.1,
+    "theta": 30,
+    "heel_from": "lead_off"
+  },
+  "fwd": {
+    "beta": 0.1,
+    "dz_land": 0.02,
+    "alpha": 0.4,
+    "dz_off": 0.06,
+    "theta": 20,
+    "heel_from": "lead_land"
+  }
+}

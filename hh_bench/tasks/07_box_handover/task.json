@@ -1,0 +1,43 @@
+{
+ "id": "07_box_handover",
+ "title": "Box handover from a truck",
+ "robot_type": "g1_29dof_rubberhand-feet-complex",
+ "max_episode_length": 1000,
+ "num_agents": 2,
+ "fps": 50,
+ "joints": 29,
+ "bodies": 30,
+ "extra_body_names": [
+  "right_wrist_yaw_link",
+  "suitcase",
+  "handover_truck_975"
+ ],
+ "frames": 1676,
+ "seconds": 33.52,
+ "object": {
+  "name": "suitcase",
+  "usd": "objects/suitcase/suitcase.usd",
+  "scale": [
+   1.85,
+   0.8833333333333334,
+   1.1375
+  ],
+  "body_name_in_motion": "suitcase",
+  "mass_kg": null
+ },
+ "static_extras": [
+  {
+   "name": "handover_truck_975",
+   "usd": "objects/handover_truck_975/handover_truck_975.usd",
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "pose": "body of the same name in motion.npz"
+  }
+ ],
+ "object_revolute_joint": null,
+ "terrain": "flat ground z=0 + static_extras (truck-sized cargo floor 1.93 x 3.02 m, top 0.975 m; walls / roof not modelled)",
+ "description": "A (agent_0) picks the box up, walks 6 steps straight to the rear edge, squats and hands it to B (agent_1) on the ground; both hold 1 s, A lets go; B steps back, turns 90 deg and walks 5 steps holding the box."
+}
