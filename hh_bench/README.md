@@ -33,11 +33,13 @@ of each robot, the object and scene assets, and the task metadata. No policy wei
 
 `10_fire_hose` has two variants: `motion/` (rubber hand) and `motion_dex3/` (Dex3 hand).
 
-**Training vs. evaluation.** The two-robot box tasks `01_L_corridor`, `02_narrow_door` and `06_DollyPlace` are
-evaluation-only: the policy is trained once on short reusable team skill units, and these long-horizon references are
-composed from those units at test time. The full sequences are never seen during training. The skill-unit sequence of
-each of these tasks is listed under `composed_from_units` in its `task.json`. The skill-unit training data will be
-released together with the training code.
+**How we use these tasks in the paper.** Heave-Ho does not train per task or per trajectory. In our setting, a single
+general policy is trained for interacting with each object, and it can follow arbitrary trajectories with that object
+(e.g. carrying a box, table or sofa along any path, turning, stepping sideways, lifting and putting down). The references
+in HH-Bench are specific instances chosen for evaluation. Where a reference was composed from reusable team skills, the
+skill sequence is listed under `composed_from_units` in its `task.json`. Our training data and code will be released later.
+
+HH-Bench itself does not prescribe a training protocol: you may train on the references directly or in any other way.
 
 ## Layout
 
