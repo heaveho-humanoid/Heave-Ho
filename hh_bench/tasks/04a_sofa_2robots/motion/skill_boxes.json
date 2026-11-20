@@ -1,514 +1,496 @@
 {
-  "fps": 50,
-  "boxes": [
-    {
-      "name": "l_sofa_v5",
-      "size": [
-        1.1499,
-        0.628,
-        0.7638
-      ],
-      "mass": 3.0,
-      "scale": [
-        1.0,
-        1.0,
-        1.0
-      ],
-      "window": [
-        0,
-        3894
-      ],
-      "frames": 3895,
-      "contact_targets": [
-        [
-          [
-            0.16,
-            0.6424,
-            0.32
-          ],
-          [
-            -0.16,
-            0.6424,
-            0.32
-          ]
-        ],
-        [
-          [
-            -0.16,
-            0.1554,
-            0.32
-          ],
-          [
-            0.16,
-            0.1554,
-            0.32
-          ]
-        ]
-      ],
-      "max_joint_step": 0.1204
-    }
-  ],
-  "l_sofa": {
-    "origin": "mesh centre in x / y at the floor, z up; long arm along x (seat front face y = 0.1004, backrest outer face y = 0.7284), short arm at +x toward -y (seat front face x = 0.4144, backrest outer face x = 1.0173)",
-    "mass": 3.0,
-    "frame_bottom": 0.32,
-    "back_steps": [
-      [
-        0.47,
-        0.031
-      ],
-      [
-        0.59,
-        0.018
-      ],
-      [
-        null,
-        0.0
-      ]
+ "fps": 50,
+ "boxes": [
+  {
+   "name": "l_sofa_v5",
+   "size": [
+    1.1499,
+    0.628,
+    0.7638
+   ],
+   "mass": 3.0,
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "window": [
+    0,
+    3894
+   ],
+   "frames": 3895,
+   "contact_targets": [
+    [
+     [
+      0.16,
+      0.6424,
+      0.32
+     ],
+     [
+      -0.16,
+      0.6424,
+      0.32
+     ]
     ],
-    "hand_faces": {
-      "front": 0.1004,
-      "back": 0.6974
-    },
-    "parts": {
-      "seat": [
-        {
-          "type": "box",
-          "center": [
-            0.0,
-            0.3328,
-            0.385
-          ],
-          "size": [
-            1.1249,
-            0.4647,
-            0.13
-          ]
-        }
-      ],
-      "back": [
-        {
-          "type": "box",
-          "center": [
-            0.0,
-            0.6313,
-            0.3648
-          ],
-          "size": [
-            1.1249,
-            0.1322,
-            0.0896
-          ]
-        },
-        {
-          "type": "box",
-          "center": [
-            0.0,
-            0.6378,
-            0.4559
-          ],
-          "size": [
-            1.1249,
-            0.1452,
-            0.0927
-          ]
-        },
-        {
-          "type": "box",
-          "center": [
-            0.0,
-            0.6468,
-            0.633
-          ],
-          "size": [
-            1.1249,
-            0.1632,
-            0.2617
-          ]
-        }
-      ],
-      "arm": [
-        {
-          "type": "box",
-          "center": [
-            -0.5289,
-            0.3328,
-            0.5191
-          ],
-          "size": [
-            0.0921,
-            0.4647,
-            0.1381
-          ]
-        },
-        {
-          "type": "box",
-          "center": [
-            0.5289,
-            0.3328,
-            0.5191
-          ],
-          "size": [
-            0.0921,
-            0.4647,
-            0.1381
-          ]
-        }
-      ],
-      "legs": [
-        {
-          "type": "box",
-          "center": [
-            -0.5114,
-            0.1859,
-            0.16
-          ],
-          "size": [
-            0.0419,
-            0.0419,
-            0.32
-          ]
-        },
-        {
-          "type": "box",
-          "center": [
-            0.5114,
-            0.1859,
-            0.16
-          ],
-          "size": [
-            0.0419,
-            0.0419,
-            0.32
-          ]
-        },
-        {
-          "type": "box",
-          "center": [
-            -0.5072,
-            0.6455,
-            0.16
-          ],
-          "size": [
-            0.0419,
-            0.0419,
-            0.32
-          ]
-        },
-        {
-          "type": "box",
-          "center": [
-            0.5072,
-            0.6455,
-            0.16
-          ],
-          "size": [
-            0.0419,
-            0.0419,
-            0.32
-          ]
-        }
-      ]
-    },
-    "com": [
-      0.0,
-      0.5244,
-      0.4958
-    ],
-    "render_mesh": {
-      "file": "assets_incoming/l_sofa/raw/mesh.npz",
-      "scale": 1.08,
-      "z_shift": "subtract the scaled mesh z_min",
-      "leg_stretch": {
-        "below": 0.18414,
-        "factor": 1.737808,
-        "above_add": 0.13586
-      },
-      "above_scale": {
-        "z1": 0.32,
-        "z0": 0.5377,
-        "ks": 0.597,
-        "seat_top": 0.45,
-        "k": 1.0
-      },
-      "straight": "keep triangles with centroid x <= -0.4548 (scaled), shift them by +0.4548, clamp x <= 0, mirror to +x"
-    }
-  },
-  "carry": "palms up under the frame bottom (support line palm heel <-> fingertips, = table data); wrists locked (wrist_lock)",
-  "wrist_lock": {
-    "left_wrist_roll_joint": -1.5441,
-    "left_wrist_pitch_joint": 0.0776,
-    "left_wrist_yaw_joint": -0.2787,
-    "right_wrist_roll_joint": 1.5444,
-    "right_wrist_pitch_joint": 0.0783,
-    "right_wrist_yaw_joint": 0.2787
-  },
-  "contact_eef": [
-    "left_wrist_yaw_link",
-    "right_wrist_yaw_link"
-  ],
-  "contact_eef_offset": {
-    "left": [
-      0.1029,
-      -0.0283,
-      0.0154
-    ],
-    "right": [
-      0.1028,
-      0.0283,
-      0.0156
+    [
+     [
+      -0.16,
+      0.1554,
+      0.32
+     ],
+     [
+      0.16,
+      0.1554,
+      0.32
+     ]
     ]
-  },
-  "segments": [
-    [
-      "hold_S0",
-      0.0
-    ],
-    [
-      "lift",
-      0.9
-    ],
-    [
-      "hold_S1",
-      12.04
-    ],
-    [
-      "fwd",
-      12.94
-    ],
-    [
-      "hold_S1",
-      16.0
-    ],
-    [
-      "rot_cw",
-      16.9
-    ],
-    [
-      "hold_S1",
-      20.56
-    ],
-    [
-      "fwd",
-      21.46
-    ],
-    [
-      "hold_S1",
-      24.52
-    ],
-    [
-      "left",
-      25.42
-    ],
-    [
-      "hold_S1",
-      29.08
-    ],
-    [
-      "rot_ccw",
-      29.98
-    ],
-    [
-      "hold_S1",
-      33.64
-    ],
-    [
-      "left",
-      34.54
-    ],
-    [
-      "hold_S1",
-      38.2
-    ],
-    [
-      "back",
-      39.1
-    ],
-    [
-      "hold_S1",
-      42.16
-    ],
-    [
-      "rot_ccw",
-      43.06
-    ],
-    [
-      "hold_S1",
-      46.72
-    ],
-    [
-      "right",
-      47.62
-    ],
-    [
-      "hold_S1",
-      51.28
-    ],
-    [
-      "right",
-      52.18
-    ],
-    [
-      "hold_S1",
-      55.84
-    ],
-    [
-      "rot_cw",
-      56.74
-    ],
-    [
-      "hold_S1",
-      60.4
-    ],
-    [
-      "back",
-      61.3
-    ],
-    [
-      "hold_S1",
-      64.36
-    ],
-    [
-      "putdown",
-      65.26
-    ],
-    [
-      "hold_S0",
-      76.4
-    ]
-  ],
-  "variant": "straight",
-  "units": [
-    "lift",
-    "fwd",
-    "rot_cw",
-    "fwd",
-    "left",
-    "rot_ccw",
-    "left",
-    "back",
-    "rot_ccw",
-    "right",
-    "right",
-    "rot_cw",
-    "back",
-    "putdown"
-  ],
-  "stability": {
-    "straight_2": {
-      "margin_cm": 11.8,
-      "tip_torque_margin_Nm": 3.5,
-      "hand_loads_N": [
-        11.2,
-        11.2,
-        3.6,
-        3.6
-      ],
-      "support_xy": [
-        [
-          0.16,
-          0.6424
-        ],
-        [
-          -0.16,
-          0.6424
-        ],
-        [
-          -0.16,
-          0.1554
-        ],
-        [
-          0.16,
-          0.1554
-        ]
-      ],
-      "com": [
-        0.0,
-        0.5244,
-        0.4958
-      ]
-    }
-  },
-  "check": {
-    "seconds": 77.9,
-    "frames": 3895,
-    "clearance_mm": {
-      "hand": 10.7,
-      "arm": 5.5,
-      "body": 38.4,
-      "leg": 36.3
-    },
-    "worst_at": {
-      "hand": [
-        364,
-        1
-      ],
-      "leg": [
-        3716,
-        0
-      ],
-      "body": [
-        2060,
-        0
-      ],
-      "arm": [
-        722,
-        0
-      ]
-    },
-    "hand_min_during_close_mm": 1.0,
-    "support_gap_mm": [
-      0.38,
-      1.76
-    ],
-    "hand_vs_sofa_sides_while_held_mm": 4.0,
-    "sofa_legs_above_floor_carried_min_cm": 5.2,
-    "sofa_on_floor_err_mm": 0.0,
-    "joint_limit_margin": 0.0,
-    "max_joint_speed": 6.02,
-    "stance_foot_speed_max": 0.026,
-    "hand_vs_own_body_mm": 31.9,
-    "hand_vs_own_body_at": [
-      256,
-      1
-    ]
-  },
-  "lift_info": {
-    "sofa": "l_sofa_v5",
-    "under": 0.32,
-    "gap_to_face": 0.185,
-    "support_depth": 0.055,
-    "fingertip_depth": 0.1255,
-    "spread": 0.16,
-    "contact_gap": 0.001,
-    "squat_contact": 0.45,
-    "squat_low": 0.47,
-    "squat_back_lean": [
-      0.5,
-      0.7
-    ],
-    "pelvis_z_contact": 0.3011,
-    "sofa_lift_hub": 0.44,
-    "hand_support_tilt_deg": 14.0,
-    "wrist_lock": {
-      "left_wrist_roll_joint": -1.5441445108182168,
-      "left_wrist_pitch_joint": 0.07762540212444348,
-      "left_wrist_yaw_joint": -0.2787209043070175,
-      "right_wrist_roll_joint": 1.5444192731723296,
-      "right_wrist_pitch_joint": 0.0783045471752479,
-      "right_wrist_yaw_joint": 0.2787347777052432
-    },
-    "stand_shoulder_roll": 0.316,
-    "reach_roll_out": 0.25,
-    "reach_wide": 0.13,
-    "lift_arm_ik_err_mm": 5.177,
-    "leg_ik_residual_mm": 0.0097,
-    "posture": "squat",
-    "frame_bottom": 0.32,
-    "seat_top": 0.45
-  },
-  "agents": {
-    "agent_0": "behind the backrest, faces -y",
-    "agent_1": "in front of the seat, faces +y"
+   ],
+   "max_joint_step": 0.1204
   }
+ ],
+ "l_sofa": {
+  "origin": "mesh centre in x / y at the floor, z up; long arm along x (seat front face y = 0.1004, backrest outer face y = 0.7284), short arm at +x toward -y (seat front face x = 0.4144, backrest outer face x = 1.0173)",
+  "mass": 3.0,
+  "frame_bottom": 0.32,
+  "back_steps": [
+   [
+    0.47,
+    0.031
+   ],
+   [
+    0.59,
+    0.018
+   ],
+   [
+    null,
+    0.0
+   ]
+  ],
+  "hand_faces": {
+   "front": 0.1004,
+   "back": 0.6974
+  },
+  "parts": {
+   "seat": [
+    {
+     "type": "box",
+     "center": [
+      0.0,
+      0.3328,
+      0.385
+     ],
+     "size": [
+      1.1249,
+      0.4647,
+      0.13
+     ]
+    }
+   ],
+   "back": [
+    {
+     "type": "box",
+     "center": [
+      0.0,
+      0.6313,
+      0.3648
+     ],
+     "size": [
+      1.1249,
+      0.1322,
+      0.0896
+     ]
+    },
+    {
+     "type": "box",
+     "center": [
+      0.0,
+      0.6378,
+      0.4559
+     ],
+     "size": [
+      1.1249,
+      0.1452,
+      0.0927
+     ]
+    },
+    {
+     "type": "box",
+     "center": [
+      0.0,
+      0.6468,
+      0.633
+     ],
+     "size": [
+      1.1249,
+      0.1632,
+      0.2617
+     ]
+    }
+   ],
+   "arm": [
+    {
+     "type": "box",
+     "center": [
+      -0.5289,
+      0.3328,
+      0.5191
+     ],
+     "size": [
+      0.0921,
+      0.4647,
+      0.1381
+     ]
+    },
+    {
+     "type": "box",
+     "center": [
+      0.5289,
+      0.3328,
+      0.5191
+     ],
+     "size": [
+      0.0921,
+      0.4647,
+      0.1381
+     ]
+    }
+   ],
+   "legs": [
+    {
+     "type": "box",
+     "center": [
+      -0.5114,
+      0.1859,
+      0.16
+     ],
+     "size": [
+      0.0419,
+      0.0419,
+      0.32
+     ]
+    },
+    {
+     "type": "box",
+     "center": [
+      0.5114,
+      0.1859,
+      0.16
+     ],
+     "size": [
+      0.0419,
+      0.0419,
+      0.32
+     ]
+    },
+    {
+     "type": "box",
+     "center": [
+      -0.5072,
+      0.6455,
+      0.16
+     ],
+     "size": [
+      0.0419,
+      0.0419,
+      0.32
+     ]
+    },
+    {
+     "type": "box",
+     "center": [
+      0.5072,
+      0.6455,
+      0.16
+     ],
+     "size": [
+      0.0419,
+      0.0419,
+      0.32
+     ]
+    }
+   ]
+  },
+  "com": [
+   0.0,
+   0.5244,
+   0.4958
+  ]
+ },
+ "carry": "palms up under the frame bottom (support line palm heel <-> fingertips, = table data); wrists locked (wrist_lock)",
+ "wrist_lock": {
+  "left_wrist_roll_joint": -1.5441,
+  "left_wrist_pitch_joint": 0.0776,
+  "left_wrist_yaw_joint": -0.2787,
+  "right_wrist_roll_joint": 1.5444,
+  "right_wrist_pitch_joint": 0.0783,
+  "right_wrist_yaw_joint": 0.2787
+ },
+ "contact_eef": [
+  "left_wrist_yaw_link",
+  "right_wrist_yaw_link"
+ ],
+ "contact_eef_offset": {
+  "left": [
+   0.1029,
+   -0.0283,
+   0.0154
+  ],
+  "right": [
+   0.1028,
+   0.0283,
+   0.0156
+  ]
+ },
+ "segments": [
+  [
+   "hold_S0",
+   0.0
+  ],
+  [
+   "lift",
+   0.9
+  ],
+  [
+   "hold_S1",
+   12.04
+  ],
+  [
+   "fwd",
+   12.94
+  ],
+  [
+   "hold_S1",
+   16.0
+  ],
+  [
+   "rot_cw",
+   16.9
+  ],
+  [
+   "hold_S1",
+   20.56
+  ],
+  [
+   "fwd",
+   21.46
+  ],
+  [
+   "hold_S1",
+   24.52
+  ],
+  [
+   "left",
+   25.42
+  ],
+  [
+   "hold_S1",
+   29.08
+  ],
+  [
+   "rot_ccw",
+   29.98
+  ],
+  [
+   "hold_S1",
+   33.64
+  ],
+  [
+   "left",
+   34.54
+  ],
+  [
+   "hold_S1",
+   38.2
+  ],
+  [
+   "back",
+   39.1
+  ],
+  [
+   "hold_S1",
+   42.16
+  ],
+  [
+   "rot_ccw",
+   43.06
+  ],
+  [
+   "hold_S1",
+   46.72
+  ],
+  [
+   "right",
+   47.62
+  ],
+  [
+   "hold_S1",
+   51.28
+  ],
+  [
+   "right",
+   52.18
+  ],
+  [
+   "hold_S1",
+   55.84
+  ],
+  [
+   "rot_cw",
+   56.74
+  ],
+  [
+   "hold_S1",
+   60.4
+  ],
+  [
+   "back",
+   61.3
+  ],
+  [
+   "hold_S1",
+   64.36
+  ],
+  [
+   "putdown",
+   65.26
+  ],
+  [
+   "hold_S0",
+   76.4
+  ]
+ ],
+ "variant": "straight",
+ "units": [
+  "lift",
+  "fwd",
+  "rot_cw",
+  "fwd",
+  "left",
+  "rot_ccw",
+  "left",
+  "back",
+  "rot_ccw",
+  "right",
+  "right",
+  "rot_cw",
+  "back",
+  "putdown"
+ ],
+ "stability": {
+  "straight_2": {
+   "margin_cm": 11.8,
+   "tip_torque_margin_Nm": 3.5,
+   "hand_loads_N": [
+    11.2,
+    11.2,
+    3.6,
+    3.6
+   ],
+   "support_xy": [
+    [
+     0.16,
+     0.6424
+    ],
+    [
+     -0.16,
+     0.6424
+    ],
+    [
+     -0.16,
+     0.1554
+    ],
+    [
+     0.16,
+     0.1554
+    ]
+   ],
+   "com": [
+    0.0,
+    0.5244,
+    0.4958
+   ]
+  }
+ },
+ "check": {
+  "seconds": 77.9,
+  "frames": 3895,
+  "clearance_mm": {
+   "hand": 10.7,
+   "arm": 5.5,
+   "body": 38.4,
+   "leg": 36.3
+  },
+  "worst_at": {
+   "hand": [
+    364,
+    1
+   ],
+   "leg": [
+    3716,
+    0
+   ],
+   "body": [
+    2060,
+    0
+   ],
+   "arm": [
+    722,
+    0
+   ]
+  },
+  "hand_min_during_close_mm": 1.0,
+  "support_gap_mm": [
+   0.38,
+   1.76
+  ],
+  "hand_vs_sofa_sides_while_held_mm": 4.0,
+  "sofa_legs_above_floor_carried_min_cm": 5.2,
+  "sofa_on_floor_err_mm": 0.0,
+  "joint_limit_margin": 0.0,
+  "max_joint_speed": 6.02,
+  "stance_foot_speed_max": 0.026,
+  "hand_vs_own_body_mm": 31.9,
+  "hand_vs_own_body_at": [
+   256,
+   1
+  ]
+ },
+ "lift_info": {
+  "sofa": "l_sofa_v5",
+  "under": 0.32,
+  "gap_to_face": 0.185,
+  "support_depth": 0.055,
+  "fingertip_depth": 0.1255,
+  "spread": 0.16,
+  "contact_gap": 0.001,
+  "squat_contact": 0.45,
+  "squat_low": 0.47,
+  "squat_back_lean": [
+   0.5,
+   0.7
+  ],
+  "pelvis_z_contact": 0.3011,
+  "sofa_lift_hub": 0.44,
+  "hand_support_tilt_deg": 14.0,
+  "wrist_lock": {
+   "left_wrist_roll_joint": -1.5441445108182168,
+   "left_wrist_pitch_joint": 0.07762540212444348,
+   "left_wrist_yaw_joint": -0.2787209043070175,
+   "right_wrist_roll_joint": 1.5444192731723296,
+   "right_wrist_pitch_joint": 0.0783045471752479,
+   "right_wrist_yaw_joint": 0.2787347777052432
+  },
+  "stand_shoulder_roll": 0.316,
+  "reach_roll_out": 0.25,
+  "reach_wide": 0.13,
+  "lift_arm_ik_err_mm": 5.177,
+  "leg_ik_residual_mm": 0.0097,
+  "posture": "squat",
+  "frame_bottom": 0.32,
+  "seat_top": 0.45
+ },
+ "agents": {
+  "agent_0": "behind the backrest, faces -y",
+  "agent_1": "in front of the seat, faces +y"
+ }
 }

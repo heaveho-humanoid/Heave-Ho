@@ -22,7 +22,7 @@ of each robot, the object and scene assets, and the task metadata. No policy wei
 | `04b_sofa_5robots` | L-shaped sofa | 5 | 51.1 | L-sofa 2.25 x 1.44 m | flat |
 | `05_stair_carry` | Stair carry | 2 | 49.7 | box 70 x 15.5 x 43 cm | stairs |
 | `06_DollyPlace` | Lift, carry and put the box on a dolly | 2 | 66.9 | box 70 x 15.5 x 43 cm | dolly, 20 cm high |
-| `07_box_handover` | Box handover from a truck | 2 | 33.5 | box | truck bed, 0.975 m high |
+| `07_box_handover` | Box handover from a truck | 2 | 33.5 | box | box truck, cargo floor 0.975 m high |
 | `08a_palanquin_2robots` | Palanquin | 2 | 21.8 | palanquin | flat |
 | `08b_palanquin_4robots` | Palanquin | 4 | 21.8 | palanquin (4 poles) | flat |
 | `09a_rebar_2robots` | Rebar / beam shoulder carry | 2 | 23.8 | beam 2.8 m | sawhorses |
@@ -71,7 +71,7 @@ tools/replay.py               replay a task in Isaac Lab (optionally write a vid
   The object and scene bodies are identical in every agent's file.
 - Object poses are the pose of the USD prim origin of the object asset with the `scale` of `task.json` applied
   (for `objects/suitcase/suitcase.usd` this origin is a bottom corner, not the centre).
-- Static scene objects (stairs, dolly, sawhorses, truck bed, millstone base) stay at their frame-0 pose.
+- Static scene objects (stairs, dolly, sawhorses, truck, millstone base) stay at their frame-0 pose.
 - All robots share one time axis and one world frame and start together.
 
 ## Robots
@@ -110,10 +110,13 @@ robots and the object every frame; nothing is simulated, so it shows the task, n
 - **`12_millstone`.** The upper stone turns about a revolute joint fixed to the world; anchor, axis and damping are in
   `object_revolute_joint` of `task.json`.
 - **`terrain.usd`** contains static collision geometry only (no rigid bodies); reference it at the world origin.
+- **`07_box_handover`.** Only the cargo floor of the truck collides (a box, 1.93 x 3.02 m, top at 0.975 m); the
+  box-truck body around it is a visual mesh without collision.
 - **`06_DollyPlace`.** The dolly sits right under the final box pose of the reference: the hands lower the box until its
   bottom is 1 cm above the dolly top, then let go.
 
 ## License
 
-The L-sofa model (`objects/l_sofa/`) was created with Meshy AI under a paid plan. The robot models are derived from
+The L-sofa model (`objects/l_sofa/`) and the box-truck model (`objects/meshy_truck/` and the visual mesh in
+`objects/handover_truck_975/`) were created with Meshy AI under a paid plan. The robot models are derived from
 Unitree's G1 description (BSD-3-Clause).

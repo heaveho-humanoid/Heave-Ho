@@ -86,8 +86,7 @@ print(f"[replay] {args.task}: {N} robots, {T} frames ({T / 50:.1f} s), robot {ro
 P0 = np.array([D[k]["body_pos_w"][0, 0] for k in range(N)]); ext = float(np.ptp(P0[:, :2], 0).max())
 dv = np.array([0.4, -0.55, 0.9] if os.path.exists(os.path.join(task_dir, "terrain.usd")) else [0.55, -0.75, 0.38])   # look down over walls
 eye_off = dv / np.linalg.norm(dv) * max(5.0, 1.5 * ext + 3.5); cam_c = None
-frames = []
-for t in range(args.start, end):
+def write_frame(t):
     for k, r in enumerate(robots):
         d = D[k]
         st = torch.cat([t2(d["body_pos_w"][t, 0]), t2(d["body_quat_w"][t, 0]), t2(d["body_lin_vel_w"][t, 0]), t2(d["body_ang_vel_w"][t, 0])])[None]
@@ -98,15 +97,29 @@ for t in range(args.start, end):
         so = torch.cat([t2(D[0]["body_pos_w"][t, i]), t2(D[0]["body_quat_w"][t, i]), torch.zeros(6, device=dev)])[None]
         o.write_root_state_to_sim(so); o.write_data_to_sim()
     for r in robots: r.write_data_to_sim()
+
+
+def move_camera(t):
+    global cam_c
+    ctr = np.mean([D[k]["body_pos_w"][min(t + 30, T - 1), 0] for k in range(N)], 0); ctr[2] = 0.6
+    cam_c = ctr if cam_c is None else 0.97 * cam_c + 0.03 * ctr
+    cam.set_world_poses_from_view(t2(cam_c + eye_off)[None], t2(cam_c)[None])
+
+
+frames = []
+if cam is not None:                        # warm-up: scene at the first frame, camera in place, let the renderer converge
+    write_frame(args.start); move_camera(args.start)
+    for _ in range(15): sim.step(render=True)
+for t in range(args.start, end):
+    write_frame(t)
+    rec = cam is not None and (t - args.start) % args.stride == 0
+    if rec: move_camera(t)                 # camera placed before rendering this frame
     sim.step(render=(t - args.start) % args.stride == 0)
     for r in robots: r.update(sim.get_physics_dt())
     for o, _ in objs: o.update(sim.get_physics_dt())
     if not app.is_running(): break
-    if cam is not None and (t - args.start) % args.stride == 0:
-        ctr = np.mean([D[k]["body_pos_w"][min(t + 30, T - 1), 0] for k in range(N)], 0); ctr[2] = 0.6
-        cam_c = ctr if cam_c is None else 0.97 * cam_c + 0.03 * ctr
-        cam.set_world_poses_from_view(t2(cam_c + eye_off)[None], t2(cam_c)[None]); cam.update(0.0)
-        frames.append(cam.data.output["rgb"][0].cpu().numpy()[..., :3].copy())
+    if rec:
+        cam.update(0.0); frames.append(cam.data.output["rgb"][0].cpu().numpy()[..., :3].copy())
 if args.video and frames:
     import imageio.v2 as iio
     iio.mimwrite(args.video, frames, fps=50 // args.stride, quality=7); print(f"[replay] wrote {args.video} ({len(frames)} frames)", flush=True)

@@ -38,6 +38,6 @@
   }
  ],
  "object_revolute_joint": null,
- "terrain": "flat ground z=0 + static_extras (truck-sized cargo floor 1.93 x 3.02 m, top 0.975 m; walls / roof not modelled)",
+ "terrain": "flat ground z=0 + static_extras (box truck; collider = cargo floor 1.93 x 3.02 m, top 0.975 m; truck body is visual only)",
  "description": "A (agent_0) picks the box up, walks 6 steps straight to the rear edge, squats and hands it to B (agent_1) on the ground; both hold 1 s, A lets go; B steps back, turns 90 deg and walks 5 steps holding the box."
 }
